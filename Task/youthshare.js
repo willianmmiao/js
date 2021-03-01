@@ -29,16 +29,16 @@ let headers = {
         $.log(wxck);
 		
         await storage();
-        await $.wait(3000);
+        await $.wait(9000);
 
         await visit();
-        await $.wait(3000);
+        await $.wait(9000);
 
         await openpage();
-        await $.wait(3000);
+        await $.wait(9000);
 
         await callback();
-        await $.wait(3000);
+        await $.wait(9000);
 
     }
 })()
