@@ -1,18 +1,18 @@
-name: 中青看点2
+name: 中青看点1
 
 on:
   workflow_dispatch:
   watch:
     types: started
   schedule:
-    - cron: '*/30 0-23 * * *'
+    - cron: '15 8 * * *'
 jobs:
   build:
     runs-on: ubuntu-latest       
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/xiaokxiansheng/js.git ~/js
+          git clone https://github.com/willianmmiao/js.git ~/js
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
@@ -23,7 +23,8 @@ jobs:
           npm install
           npm install cron
           npm install request
-      - name: '运行 【中青看点2】'
+          npm install md5-node
+      - name: '运行 【youthshare】'
         run: |
           cd ~/js   
-          node Task/youth2.js
+          node Task/youthshare1.js
